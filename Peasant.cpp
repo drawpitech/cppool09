@@ -48,7 +48,7 @@ int Peasant::technic(int cost, int damage, std::string output) {
 
 int Peasant::attack() { return technic(10, 5, "tosses a stone"); }
 int Peasant::special() {
-    return technic(0, 0, "doesn’t know any special move");
+    return technic(0, 0, "doesn't know any special move");
 }
 void Peasant::rest() { technic(-30, 0, "takes a nap"); }
 
