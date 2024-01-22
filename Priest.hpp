@@ -12,6 +12,6 @@
 class Priest : public virtual Enchanter {
    public:
     Priest(const std::string &name, int power);
-    ~Priest();
+    ~Priest() override;
     void rest() override;
 };

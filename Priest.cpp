@@ -8,7 +8,7 @@
 #include "Priest.hpp"
 
 Priest::Priest(const std::string &name, int power)
-    : Peasant(name, power), Enchanter(name, power) {
+    : ICharacter(name, power), Peasant(name, power), Enchanter(name, power) {
     talk("enters in the order");
 }
 

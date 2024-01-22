@@ -9,10 +9,8 @@
 
 #include <algorithm>
 #include <iostream>
-#include <utility>
 
-Peasant::Peasant(const std::string &name, int power)
-    : _name(name), _power(power), _hp(MAX_HP) {
+Peasant::Peasant(const std::string &name, int power) : ICharacter(name, power) {
     talk("goes for an adventure");
 }
 

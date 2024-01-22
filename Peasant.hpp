@@ -9,33 +9,25 @@
 
 #include <string>
 
-constexpr int MIN_POWER = 0;
-constexpr int MAX_POWER = 100;
+#include "ICharacter.hpp"
 
-constexpr int MIN_HP = 0;
-constexpr int MAX_HP = 100;
-
-class Peasant {
+class Peasant : public virtual ICharacter {
    public:
     Peasant(const std::string &name, int power);
-    ~Peasant();
+    ~Peasant() override;
 
-    [[nodiscard]] const std::string &getName() const;
-    [[nodiscard]] int getPower() const;
-    void setPower(int power);
-    [[nodiscard]] int getHp() const;
-    void setHp(int hp);
+    [[nodiscard]] const std::string &getName() const override;
+    [[nodiscard]] int getPower() const override;
+    void setPower(int power) override;
+    [[nodiscard]] int getHp() const override;
+    void setHp(int hp) override;
 
-    virtual int attack();
-    virtual int special();
-    virtual void rest();
-    virtual void damage(int damage);
+    int attack() override;
+    int special() override;
+    void rest() override;
+    void damage(int damage) override;
 
    protected:
-    const std::string _name;
-    int _power;
-    int _hp;
-
-    int technic(int cost, int damage, std::string output);
-    virtual void talk(std::string output) const;
+     int technic(int cost, int damage, std::string output) override;
+     void talk(std::string output) const override;
 };

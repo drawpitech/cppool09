@@ -12,7 +12,7 @@
 class Enchanter : public virtual Peasant {
    public:
     Enchanter(const std::string &name, int power);
-    ~Enchanter();
+    ~Enchanter() override;
     int attack() override;
     int special() override;
     void rest() override;

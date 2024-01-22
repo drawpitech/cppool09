@@ -13,7 +13,7 @@
 class Paladin : public virtual Knight, public virtual Priest {
    public:
     Paladin(const std::string &name, int power);
-    ~Paladin();
+    ~Paladin() override;
 
     int attack() override;
     int special() override;

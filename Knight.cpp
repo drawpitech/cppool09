@@ -7,7 +7,8 @@
 
 #include "Knight.hpp"
 
-Knight::Knight(const std::string &name, int power) : Peasant(name, power) {
+Knight::Knight(const std::string &name, int power)
+    : ICharacter(name, power), Peasant(name, power) {
     talk("vows to protect the kingdom");
 }
 

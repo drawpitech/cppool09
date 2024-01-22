@@ -8,7 +8,8 @@
 #include "Paladin.hpp"
 
 Paladin::Paladin(const std::string &name, int power)
-    : Peasant(name, power),
+    : ICharacter(name, power),
+      Peasant(name, power),
       Knight(name, power),
       Enchanter(name, power),
       Priest(name, power) {

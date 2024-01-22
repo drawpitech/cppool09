@@ -12,7 +12,7 @@
 class Knight : public virtual Peasant {
    public:
     Knight(const std::string &name, int power);
-    ~Knight();
+    ~Knight() override;
     int attack() override;
     int special() override;
     void rest() override;
