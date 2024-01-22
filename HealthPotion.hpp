@@ -11,5 +11,5 @@
 
 class HealthPotion : public IPotion {
    public:
-    HealthPotion();
+    HealthPotion() : IPotion(0, 50) {}
 };

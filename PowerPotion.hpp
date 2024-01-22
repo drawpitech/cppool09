@@ -11,5 +11,5 @@
 
 class PowerPotion : public IPotion {
    public:
-    PowerPotion();
+    PowerPotion() : IPotion(50, 0) {}
 };

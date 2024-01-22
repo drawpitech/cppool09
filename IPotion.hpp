@@ -9,10 +9,10 @@
 
 class IPotion {
    public:
-    IPotion(int power, int health);
+    IPotion(int power, int health) : _power(power), _health(health) {}
 
-    [[nodiscard]] int getPower() const;
-    [[nodiscard]] int getHealth() const;
+    [[nodiscard]] int getPower() const { return _power; }
+    [[nodiscard]] int getHealth() const { return _health; }
 
    private:
     int _power;

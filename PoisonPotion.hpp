@@ -11,5 +11,5 @@
 
 class PoisonPotion : public IPotion {
    public:
-    PoisonPotion();
+    PoisonPotion() : IPotion(0, -50) {}
 };

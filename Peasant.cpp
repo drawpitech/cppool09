@@ -52,14 +52,9 @@ void Peasant::rest() { technic(-30, 0, "takes a nap"); }
 
 void Peasant::damage(int damage) {
     setHp(_hp - damage);
-    if (_hp == MIN_HP)
-        talk("is out of combat");
-    else {
-        std::string output = "takes ";
-        output += std::to_string(damage);
-        output += " damage";
-        talk(std::move(output));
-    }
+    talk(
+        (_hp == MIN_HP) ? "is out of combat"
+                        : "takes " + std::to_string(damage) + " damage");
 }
 
 void Peasant::drink(const IPotion &potion) {

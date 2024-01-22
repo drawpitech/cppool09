@@ -4,7 +4,3 @@
 ** File description:
 ** PoisonPotion
 */
-
-#include "PoisonPotion.hpp"
-
-PoisonPotion::PoisonPotion() : IPotion(0, -50) {}
