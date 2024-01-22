@@ -61,3 +61,27 @@ void Peasant::damage(int damage) {
         talk(std::move(output));
     }
 }
+
+void Peasant::drink(const IPotion &potion) {
+    setHp(_hp + potion.getHealth());
+    setPower(_power + potion.getPower());
+    talk("drinks a mysterious potion");
+}
+
+void Peasant::drink(const HealthPotion &potion) {
+    setHp(_hp + potion.getHealth());
+    setPower(_power + potion.getPower());
+    talk("feels rejuvenated");
+}
+
+void Peasant::drink(const PoisonPotion &potion) {
+    setHp(_hp + potion.getHealth());
+    setPower(_power + potion.getPower());
+    talk("has been poisoned");
+}
+
+void Peasant::drink(const PowerPotion &potion) {
+    setHp(_hp + potion.getHealth());
+    setPower(_power + potion.getPower());
+    std::cout << _name << "'s power is restored.\n";
+}

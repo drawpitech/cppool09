@@ -9,6 +9,11 @@
 
 #include <string>
 
+#include "IPotion.hpp"
+#include "HealthPotion.hpp"
+#include "PoisonPotion.hpp"
+#include "PowerPotion.hpp"
+
 constexpr int MIN_POWER = 0;
 constexpr int MAX_POWER = 100;
 
@@ -31,6 +36,11 @@ class ICharacter {
     virtual int special() = 0;
     virtual void rest() = 0;
     virtual void damage(int damage) = 0;
+
+    virtual void drink(const IPotion &potion) = 0;
+    virtual void drink(const HealthPotion &potion) = 0;
+    virtual void drink(const PoisonPotion &potion) = 0;
+    virtual void drink(const PowerPotion &potion) = 0;
 
    protected:
     const std::string _name;

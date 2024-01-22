@@ -27,7 +27,12 @@ class Peasant : public virtual ICharacter {
     void rest() override;
     void damage(int damage) override;
 
+    void drink(const IPotion &potion) override;
+    void drink(const HealthPotion &potion) override;
+    void drink(const PoisonPotion &potion) override;
+    void drink(const PowerPotion &potion) override;
+
    protected:
-     int technic(int cost, int damage, std::string output) override;
-     void talk(std::string output) const override;
+    int technic(int cost, int damage, std::string output) override;
+    void talk(std::string output) const override;
 };
