@@ -9,9 +9,9 @@
 
 #include "Enchanter.hpp"
 
-class Priest : public Enchanter {
+class Priest : public virtual Enchanter {
    public:
     Priest(const std::string &name, int power);
     ~Priest();
-    void rest();
+    void rest() override;
 };

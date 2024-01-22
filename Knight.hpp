@@ -9,11 +9,11 @@
 
 #include "Peasant.hpp"
 
-class Knight : public Peasant {
+class Knight : public virtual Peasant {
    public:
     Knight(const std::string &name, int power);
     ~Knight();
-    int attack();
-    int special();
-    void rest();
+    int attack() override;
+    int special() override;
+    void rest() override;
 };

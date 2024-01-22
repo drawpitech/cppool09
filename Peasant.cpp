@@ -12,7 +12,7 @@
 #include <utility>
 
 Peasant::Peasant(const std::string &name, int power)
-    : _name(std::move(name)), _power(power), _hp(MAX_HP) {
+    : _name(name), _power(power), _hp(MAX_HP) {
     talk("goes for an adventure");
 }
 

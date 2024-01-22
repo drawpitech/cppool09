@@ -26,10 +26,10 @@ class Peasant {
     [[nodiscard]] int getHp() const;
     void setHp(int hp);
 
-    int attack();
-    int special();
-    void rest();
-    void damage(int damage);
+    virtual int attack();
+    virtual int special();
+    virtual void rest();
+    virtual void damage(int damage);
 
    protected:
     const std::string _name;
@@ -37,5 +37,5 @@ class Peasant {
     int _hp;
 
     int technic(int cost, int damage, std::string output);
-    void talk(std::string output) const;
+    virtual void talk(std::string output) const;
 };

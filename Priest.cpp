@@ -7,7 +7,8 @@
 
 #include "Priest.hpp"
 
-Priest::Priest(const std::string &name, int power) : Enchanter(name, power) {
+Priest::Priest(const std::string &name, int power)
+    : Peasant(name, power), Enchanter(name, power) {
     talk("enters in the order");
 }
 
