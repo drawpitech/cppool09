@@ -31,7 +31,7 @@ class Peasant {
     void rest();
     void damage(int damage);
 
-   private:
+   protected:
     const std::string _name;
     int _power;
     int _hp;
