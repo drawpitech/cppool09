@@ -30,7 +30,7 @@ void Peasant::talk(std::string output) const {
     std::cout << _name << " " << output << ".\n";
 }
 
-int Peasant::technic(int cost, int damage, std::string output) {
+int Peasant::technic(int cost, int damage, int heal, std::string output) {
     if (_hp == 0) {
         talk("is out of combat");
         return 0;
@@ -41,14 +41,15 @@ int Peasant::technic(int cost, int damage, std::string output) {
     }
     talk(std::move(output));
     setPower(_power - cost);
+    setHp(_hp + heal);
     return damage;
 }
 
-int Peasant::attack() { return technic(10, 5, "tosses a stone"); }
+int Peasant::attack() { return technic(10, 5, 0, "tosses a stone"); }
 int Peasant::special() {
-    return technic(0, 0, "doesn't know any special move");
+    return technic(0, 0, 0, "doesn't know any special move");
 }
-void Peasant::rest() { technic(-30, 0, "takes a nap"); }
+void Peasant::rest() { technic(-30, 0, 0, "takes a nap"); }
 
 void Peasant::damage(int damage) {
     setHp(_hp - damage);

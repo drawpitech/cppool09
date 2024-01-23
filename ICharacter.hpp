@@ -9,8 +9,8 @@
 
 #include <string>
 
-#include "IPotion.hpp"
 #include "HealthPotion.hpp"
+#include "IPotion.hpp"
 #include "PoisonPotion.hpp"
 #include "PowerPotion.hpp"
 
@@ -47,6 +47,6 @@ class ICharacter {
     int _power;
     int _hp;
 
-    virtual int technic(int cost, int damage, std::string output) = 0;
+    virtual int technic(int cost, int damage, int heal, std::string output) = 0;
     virtual void talk(std::string output) const = 0;
 };

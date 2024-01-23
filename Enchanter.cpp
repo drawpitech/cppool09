@@ -14,6 +14,6 @@ Enchanter::Enchanter(const std::string &name, int power)
 
 Enchanter::~Enchanter() { talk("closes his spellbook"); }
 
-int Enchanter::attack() { return technic(0, 0, "doesn't know how to fight"); }
-int Enchanter::special() { return technic(50, 99, "casts a fireball"); }
-void Enchanter::rest() { technic(-100, 0, "meditates"); }
+int Enchanter::attack() { return technic(0, 0, 0, "doesn't know how to fight"); }
+int Enchanter::special() { return technic(50, 99, 0, "casts a fireball"); }
+void Enchanter::rest() { technic(-100, 0, 0, "meditates"); }

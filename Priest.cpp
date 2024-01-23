@@ -15,6 +15,5 @@ Priest::Priest(const std::string &name, int power)
 Priest::~Priest() { talk("finds peace"); }
 
 void Priest::rest() {
-    technic(-100, 0, "prays");
-    setHp(getHp() + 100);
+    technic(-100, 0, 100, "prays");
 }

@@ -14,6 +14,6 @@ Knight::Knight(const std::string &name, int power)
 
 Knight::~Knight() { talk("takes off his armor"); }
 
-int Knight::attack() { return technic(10, 20, "strikes with his sword"); }
-int Knight::special() { return technic(30, 50, "impales his enemy"); }
-void Knight::rest() { technic(-50, 0, "eats"); }
+int Knight::attack() { return technic(10, 20, 0, "strikes with his sword"); }
+int Knight::special() { return technic(30, 50, 0, "impales his enemy"); }
+void Knight::rest() { technic(-50, 0, 0, "eats"); }

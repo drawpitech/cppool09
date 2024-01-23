@@ -33,6 +33,6 @@ class Peasant : public virtual ICharacter {
     void drink(const PowerPotion &potion) override;
 
    protected:
-    int technic(int cost, int damage, std::string output) override;
+    int technic(int cost, int damage, int heal, std::string output) override;
     void talk(std::string output) const override;
 };
